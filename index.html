@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+        <title>Quizlet Show</title>
+
+        <link href="./css/bootstrap.css" rel="stylesheet">
+        <link href="./css/cover.css" rel="stylesheet">
+        <link href="./css/bootstrap-slider.css" rel="stylesheet">
+        
+     
+    </head>
+
+     <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container" id="cover-container">
+
+         <div class="inner cover">
+            
+            <div class="content">
+                <div class="term">
+                    <h1 id="term" class="cover-heading stuff">term</h1>
+                </div>
+                <div id="definition" class="definition lead stuff">
+                    <p>Definition</p>
+                </div>
+            </div>
+
+           
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>quizletShow by <a href="http://getbootstrap.com">Ryan Meyers</a> | <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#settingsModal" data-whatever="settings"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> settings </button> | <button type="button" class="btn btn-warning btn-sm" id="nextSlide"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span> next</button> </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+        <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="settingsModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="settingsModalLabel"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Settings</h4>
+              </div>
+              <div class="modal-body">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="setID" class="control-label">Quizlet Set ID:</label>
+                    <input type="text" class="form-control" id="setID">
+                  </div>
+                  <div class="form-group">
+                    <label for="inOrder" class="control-label">In what order should the cards be displayed?</label>
+                    <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-primary">
+                            <input type="radio" name="inOrder" id="inOrderKeep" autocomplete="off" value="keep"> Original Order
+                          </label>
+                          <label class="btn btn-primary active">
+                            <input type="radio" name="inOrder" id="inOrderShuffle" autocomplete="off" value="shuffle"> Shuffled/Random
+                          </label>
+                          <label class="btn btn-primary active">
+                            <input type="radio" name="inOrder" id="inOrderTerm" autocomplete="off" value="term"> Alphabetical (Terms)
+                          </label>
+                          <label class="btn btn-primary active">
+                            <input type="radio" name="inOrder" id="inOrderDefinition" autocomplete="off" value="definition"> Alphabetical (Definitions)
+                          </label>
+                        </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="displayFirst" class="control-label">Which should display first?</label>
+                    <div class="btn-group" data-toggle="buttons">
+                          <label class="btn btn-primary active">
+                            <input type="radio" name="displayFirst" id="displayFirstTerm" autocomplete="off" value="term"> Terms
+                          </label>
+                          <label class="btn btn-primary">
+                            <input type="radio" name="displayFirst" id="displayFirstDefinition" autocomplete="off" value="definition"> Definitions
+                          </label>
+                          <label class="btn btn-primary">
+                            <input type="radio" name="displayFirst" id="displayFirstBoth" autocomplete="off" value="both"> Both
+                          </label>
+                        </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="displayTime" class="control-label">How long should each card display?</label>
+                    <input id="displayTime" type="text" />
+                   
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="displayDelay" class="control-label">How long before the <span id="termDefinition">term</span> displays?</label>
+                    <input id="displayDelay" type="text" />
+                  
+                  </div>
+                  <div class="form-group">
+                    <label for="betweenCards" class="control-label">How long should we wait between cards?</label>
+                    <input id="betweenCards" type="text"  />
+                   
+                  </div>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="img_div"><img src="" id="img_bg" /></div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.ba-throttle-debounce.min.js"></script>
+    <script src="./js/utilityFunctions.js"></script>
+    <script src="./js/jquery.balancetext.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap-slider.js"></script>
+     <script src="./js/bigtext.js"></script>    
+     <script src="./js/TweenMax.min.js"></script>
+      <script src="./js/utils/SplitText.min.js"></script> 
+        <script src="./js/quizletShow.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
